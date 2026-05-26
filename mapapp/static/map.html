@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+
+<body>
+
+<h1>TEST</h1>
+
+<img src="{% static 'Screenshot 2026-05-24 151239.png' %}" usemap="#image-map">
+
+<map name="image-map">
+
+    <area alt="Davi fort" title="Davi fort"
+          coords="37,312,291,453" shape="rect"
+          href="javascript:void(0)" onclick="show('fort')">
+
+    <area alt="Silver Beach" title="Silver Beach"
+          coords="570,406,104" shape="circle"
+          href="javascript:void(0)" onclick="show('beach')">
+
+    <area alt="Periyar college" title="Periyar college"
+          coords="416,233,583,245,705,249,609,110,488,118,416,229" shape="poly"
+          href="javascript:void(0)" onclick="show('college')">
+
+</map>
+
+<div id="beach" style="display:none;">
+    <h2>🌊 Beach Page</h2>
+</div>
+
+<div id="fort" style="display:none;">
+    <h2>🏰 Fort Page</h2>
+</div>
+
+<div id="college" style="display:none;">
+    <h2>🎓 College Page</h2>
+</div>
+
+<script>
+function show(id){
+    document.getElementById("beach").style.display="none";
+    document.getElementById("fort").style.display="none";
+    document.getElementById("college").style.display="none";
+
+    document.getElementById(id).style.display="block";
+}
+</script>
+
+</body>
+</html>

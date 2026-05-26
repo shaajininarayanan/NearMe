@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Page</title>
+</head>
+
+<body>
+
+<h1>MAP PAGE WORKING 🔥</h1>
+
+<!-- IMAGE MAP -->
+<img src="{% static 'Screenshot 2026-05-24 151239.png' %}" usemap="#image-map">
+
+<map name="image-map">
+
+    <!-- BEACH -->
+    <area alt="Beach" title="Beach"
+        coords="570,406,104" shape="circle"
+        href="/beach/">
+
+    <!-- FORT -->
+    <area alt="Fort" title="Fort"
+        coords="37,312,291,453" shape="rect"
+        href="/fort/">
+
+    <!-- COLLEGE -->
+    <area alt="College" title="College"
+        coords="416,233,583,245,705,249,609,110,488,118,416,229"
+        shape="poly"
+        href="/college/">
+
+</map>
+
+</body>
+</html>
